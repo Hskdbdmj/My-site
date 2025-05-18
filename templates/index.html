@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>فرمتة الجهاز المفقود</title>
+<style>
+    body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 20px; }
+    .container { max-width: 450px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1);}
+    h1 { text-align: center; color: #333; margin-bottom: 20px; }
+    input[type="email"], input[type="password"] {
+        width: 100%; padding: 10px; margin: 10px 0 20px 0; border-radius: 6px; border: 1px solid #ccc;
+        font-size: 16px;
+    }
+    button.submit-btn {
+        width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px;
+        cursor: pointer; font-size: 18px;
+        margin-bottom: 25px;
+    }
+    button.submit-btn:hover { background: #0056b3; }
+
+    .social-buttons {
+        display: flex; flex-direction: column; gap: 15px;
+    }
+    .btn {
+        display: flex; align-items: center; justify-content: space-between;
+        background: #eee; padding: 12px 20px; border-radius: 8px; cursor: pointer;
+        font-size: 16px; text-decoration: none; color: #333; font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: background 0.3s;
+    }
+    .btn:hover { background: #ddd; }
+    .btn img {
+        width: 24px; height: 24px;
+    }
+    .btn .left-icon {
+        order: -1; /* يخلي الصورة على اليسار */
+        margin-left: 15px;
+    }
+    .btn .right-icon {
+        order: 1; /* يخلي الصورة على اليمين */
+        margin-right: 15px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>فرمتة الجهاز المفقود</h1>
+    <form method="POST">
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+        <input type="password" name="password" placeholder="كلمة المرور" required />
+        <button type="submit" class="submit-btn">إرسال</button>
+    </form>
+
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/iq_dev13" target="_blank" class="btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="right-icon" />
+            Instagram
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="left-icon" />
+        </a>
+        <a href="https://www.tiktok.com/@9rf01" target="_blank" class="btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046128.png" alt="TikTok" class="right-icon" />
+            TikTok
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046128.png" alt="TikTok" class="left-icon" />
+        </a>
+        <a href="https://www.threads.net/@iq_dev13" target="_blank" class="btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Meta_Threads_logo.svg" alt="Threads" class="right-icon" />
+            Threads
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Meta_Threads_logo.svg" alt="Threads" class="left-icon" />
+        </a>
+        <a href="https://www.facebook.com/nihad.alkazrge" target="_blank" class="btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="right-icon" />
+            Facebook
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="left-icon" />
+        </a>
+    </div>
+</div>
+</body>
+</html>
+

